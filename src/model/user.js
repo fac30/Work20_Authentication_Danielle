@@ -1,5 +1,6 @@
 const db = require("../database/db.js");
 
+
 const insert_user = db.prepare(/*sql*/ `
   INSERT INTO users (email, hash)
   VALUES ($email, $hash)
@@ -18,6 +19,6 @@ function getUserByEmail(email) {
   return select_user_by_email.get(email);
 }
 
-//sdeuhbfksjhdbkshjd
+
 
 module.exports = { createUser, getUserByEmail };
